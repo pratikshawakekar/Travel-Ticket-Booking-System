@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<style>
+  body {
+    position: relative; 
+  }
+  
+  .box1 {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(248, 209, 209, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.box1 label {
+color: black;
+}
+
+
+
+.logo_bar form a {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+}
+
+.logo_bar a:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+.logo_bar a span {
+  position: absolute;
+  display: block;
+}
+
+.logo_bar a span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,
+  100% {
+    left: 100%;
+  }
+}
+
+.logo_bar a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #03e9f4);
+  animation: btn-anim2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,
+  100% {
+    top: 100%;
+  }
+}
+
+.logo_bar a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #03e9f4);
+  animation: btn-anim3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,
+  100% {
+    right: 100%;
+  }
+}
+
+.logo_bar a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #03e9f4);
+  animation: btn-anim4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,
+  100% {
+    bottom: 100%;
+  }
+}
+
+ #section1 {
+  background-image: url("https://wallpaperaccess.com/full/2135329.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  padding-top:50px;height:900px;}
+  
+ footer{
+        clear: both;
+        background: black;
+        text-align: center;
+        padding: 15px;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <div class="logo_bar">
+      <form>
+      <a class="navbar-brand" href="#">
+      			<span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+      <i class="fas fa-gem me-3"></i>Travel Ticket Booking-System</a>
+      </form>
+      </div>
+    </div>
+    
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav"><br><br>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">About</a></li>
+          <li><a href="booking.html">Ticket-Booking</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>  
+    </div>
+    </nav>
+    
+    <br><br>
+<div id="section1" class="container-fluid">
+
+<div class="container">
+<div class="box1">
+<form action="#" onsubmit="return validation()" class="bg-light">
+				
+				<div class="form-group">
+					<label for="fuser" class="font-weight-bold"> User First Name: </label>
+					<input type="text" name="fuser" class="form-control" id="fuser" autocomplete="off">
+					<span id="userfirstname" class="text-danger font-weight-bold"> </span>
+				</div>
+				
+				<div class="form-group">
+					<label for="luser" class="font-weight-bold"> User Last Name: </label>
+					<input type="text" name="luser" class="form-control" id="luser" autocomplete="off">
+					<span id="userlastname" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Password: </label>
+					<input type="password" name="pass" class="form-control" id="pass" autocomplete="off">
+					<span id="passwords" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Confirm Password: </label>
+					<input type="password" name="conpass" class="form-control" id="conpass" autocomplete="off">
+					<span id="confrmpass" class="text-danger font-weight-bold"> </span>
+				</div>
+				
+				<div class="form-group" >
+				<label class="font-weight-bold">Select City:</label>
+				<select id="ucity">
+				<option value="select city">(Please select a city)</option>
+				<option>Amravati</option>
+				<option>Akola</option>
+				<option>Nagpur</option>
+				<option>Pune</option>
+				<option >Mumbai</option>
+				</select>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Mobile Number: </label>
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
+					<span id="mobileno" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group">
+					<label class="font-weight-bold"> Email: </label>
+					<input type="text" name="email" class="form-control" id="emails" autocomplete="off">
+					<span id="emailids" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<input type="submit" name="submit" value="submit" class="btn btn-success" 	autocomplete="off">
+				<input type="reset" name="reset" value="reset" class="btn btn-success" 	autocomplete="off">
+
+
+			</form><br><br>
+
+
+  </div>
+  </div>
+  </div>
+  
+  
+<footer>
+  © 2022 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">info@travel.com</a>
+  <div class="container-fluid">
+  <div class="row">
+  <div class="col-md-4"><h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Travel Ticket Booking
+          </h6>
+          <p>
+            Online to make your journey even more memorable access or meet
+          </p>
+         
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    
+          
+          </div>
+          
+          <div class="col-md-4">
+          <p>
+            <a href="home.html" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="home.html" class="text-reset">About</a>
+          </p>
+           <p>
+            <a href="booking.html" class="text-reset">Travel-Booking</a>
+          </p>
+          <p>
+            <a href="service.html" class="text-reset">Service</a>
+          </p>
+           <p>
+            <a href="contact.html" class="text-reset">Contact</a>
+          </p>
+         </div>
+          
+  <div class="col-md-4">
+  <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Pune, India </p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@travel.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 91 8721345670</p>
+          <p><i class="fas fa-print me-3"></i> + 91 8721345678 </p>
+          </div>
+          
+       
+    </div></div>
+    </footer>
+
+  
+  
+  <script type="text/javascript">
+		
+
+		function validation(){
+
+			var fuser = document.getElementById('fuser').value;
+			var luser = document.getElementById('luser').value;
+			var pass = document.getElementById('pass').value;
+			var confirmpass = document.getElementById('conpass').value;
+			var city = document.getElementById('ucity').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+			var emails = document.getElementById('emails').value;
+
+
+
+
+
+			if(fuser == ""){
+				document.getElementById('userfirstname').innerHTML =" * Please fill the user first name field";
+				return false;
+			}
+			if((fuser.length <= 2) || (fuser.length > 20)) {
+				document.getElementById('userfirstname').innerHTML =" * User first name lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(fuser)){
+				document.getElementById('userfirstname').innerHTML =" * only characters are allowed";
+				return false;
+			}
+			
+			
+			
+			
+			
+			if(luser == ""){
+				document.getElementById('userlastname').innerHTML =" * Please fill the user last name field";
+				return false;
+			}
+			if((luser.length <= 2) || (luser.length > 20)) {
+				document.getElementById('userlastname').innerHTML =" * User last name lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(luser)){
+				document.getElementById('userlastname').innerHTML =" * only characters are allowed";
+				return false;
+			}
+
+
+
+
+
+
+
+			if(pass == ""){
+				document.getElementById('passwords').innerHTML =" * Please fill the password field";
+				return false;
+			}
+			if((pass.length <= 5) || (pass.length > 20)) {
+				document.getElementById('passwords').innerHTML =" * Passwords lenght must be between  5 and 20";
+				return false;	
+			}
+
+
+			if(pass!=confirmpass){
+				document.getElementById('confrmpass').innerHTML =" * Password does not match the confirm password";
+				return false;
+			}
+
+
+
+			if(confirmpass == ""){
+				document.getElementById('confrmpass').innerHTML =" * Please fill the confirmpassword field";
+				return false;
+			}
+			
+			
+			
+			if(city == "select city"){
+				
+				alert('Select your city from the list');
+				return false;
+			}
+
+
+
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" * Please fill the mobile NUmber field";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" * user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" * Mobile Number must be 10 digits only";
+				return false;
+			}
+
+
+
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML =" * Please fill the email idx` field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" * @ Invalid Position";
+				return false;
+			}
+
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" * . Invalid Position";
+				return false;
+			}
+		}
+
+	</script>
+</body>
+</html>
